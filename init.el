@@ -105,15 +105,6 @@
 ;; rewrite
 (setq gptel-rewrite-default-action 'accept) ;; or 'merge, 'diff, etc.
 
-;; ollama buddy
-(use-package ollama-buddy
-  :bind
-  ("C-c o" . ollama-buddy-menu)
-  ("C-c O" . ollama-buddy-transient-menu-wrapper))
-
-
-
-
 ;; google translate
  ;; (global-set-key (kbd "C-c ñ") 'google-translate-region)
 
@@ -122,7 +113,7 @@
   :host "openrouter.ai"
   :endpoint "/api/v1/chat/completions"
   :stream t
-  :key "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"
+  :key "your api key"
   :models '(deepseek/deepseek-chat-v3-0324:free
             deepseek/deepseek-r1:free
             meta-llama/llama-4-maverick:free
