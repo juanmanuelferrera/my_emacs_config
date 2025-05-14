@@ -1220,6 +1220,8 @@ Otherwise, open the repository's main page."
   :ensure nil
   :defer t
   :mode ("\\.org\\'" . org-mode)
+  :init
+  (require 'calendar)
   :config
   (setq
    ;; Start collapsed for speed
@@ -1235,6 +1237,16 @@ Otherwise, open the repository's main page."
    ;; Org styling, hide markup etc.
    org-hide-emphasis-markers t
    org-pretty-entities t
+
+   ;; Calendar settings
+   org-read-date-prefer-future t
+   org-read-date-popup t
+   org-read-date-force-compatible-dates t
+   org-read-date-display-live t
+   org-read-date-show-calendar t
+   org-read-date-with-time nil
+   org-read-date-allow-time nil
+   org-read-date-inactive nil
 
    ;; Agenda styling
    org-agenda-tags-column 0
